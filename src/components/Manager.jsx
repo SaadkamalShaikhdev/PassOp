@@ -9,8 +9,7 @@ const Manager = () => {
 useEffect(() => {
  let passwords = localStorage.getItem("passwords")
   if(passwords){
-   setPasswordArray(passwords)
-  }
+setPasswordArray(JSON.parse(passwords))  }
   
 }, [])
 
@@ -32,8 +31,8 @@ const savePassword =() => {
   setPasswordArray([...passwordArray , form])
   localStorage.setItem("passwords" , JSON.stringify([...passwordArray , form]))
   console.log([...passwordArray , form]);
-  
 }
+
 
 
    
@@ -66,33 +65,29 @@ const savePassword =() => {
  </div>
 
  <div className="passwords">
-<h2>Your Passwords</h2>
-<table className="table-auto w-full rounded-md overflow-hidden">
+<h2 className='font-bold text-2xl py-4'>Your Passwords</h2>
+  {passwordArray.length === 0 && <div className='text-center text-xl font-bold'>No Password to Show</div>}
+  {passwordArray.length !== 0 && <table className="table-auto w-full rounded-md overflow-hidden">
   <thead className='bg-green-800 text-white'>
     <tr>
-      <th className='py-2'>Song</th>
-      <th className='py-2'>Artist</th>
-      <th className='py-2'>Year</th>
+      <th className='py-2'>Site</th>
+      <th className='py-2'>Username</th>
+      <th className='py-2'>Password</th>
     </tr>
   </thead>
   <tbody className='bg-green-50'>
-    <tr>
-      <td className='text-center w-fit py-2'>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td className='text-center w-fit py-2'>Malcolm Lockyer</td>
-      <td className='text-center w-fit py-2'>1961</td>
-    </tr>
-    <tr>
-      <td className='text-center w-fit py-2'>Witchy Woman</td>
-      <td className='text-center w-fit py-2'>The Eagles</td>
-      <td className='text-center w-fit py-2'>1972</td>
-    </tr>
-    <tr>
-      <td className='text-center w-fit py-2'>Shining Star</td>
-      <td className='text-center w-fit py-2'>Earth, Wind, and Fire</td>
-      <td className='text-center w-fit py-2'>1975</td>
-    </tr>
+   {passwordArray.map((items, index) => (
+      <tr key={index}>
+        <td className='w-[33%] text-center'><a target='_blank' href={items.site}>{items.site}</a></td>
+        <td className='w-[33%] text-center'>{items.username}</td>
+        <td className='w-[33%] text-center'>{items.password}</td>
+      </tr>
+    ))}
+   
+   
   </tbody>
-</table>  
+</table>}
+  
  </div>
  </div>
  </>
