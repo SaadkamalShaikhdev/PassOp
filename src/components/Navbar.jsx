@@ -10,12 +10,12 @@ const Navbar = () => {
         Pass
        <span className='text-green-500 '>OP/&gt;</span>
         </div>
-    <ul className='flex gap-4'>
-    <li><a className='relative hover:text-gray-200 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-200 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-200 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' href="#">Home</a></li>
-    <li><a className='relative hover:text-gray-200 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-200 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-200 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' href="#">About</a></li>
-    <li><a className='relative hover:text-gray-200 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-200 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-200 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' href="#">Contact</a></li>
-    </ul>
-    <button className='text-white bg-green-500 flex items-center gap-2 rounded-full px-2 cursor-pointer hover:bg-green-600 transition'>
+    {/* <ul className='flex gap-4'>
+    <li><a className='relative hover:text-gray-200 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-200 before:origin-center before:h-px before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-200 after:origin-center after:h-px after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' href="#">Home</a></li>
+    <li><a className='relative hover:text-gray-200 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-200 before:origin-center before:h-px before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-200 after:origin-center after:h-px after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' href="#">About</a></li>
+    <li><a className='relative hover:text-gray-200 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-200 before:origin-center before:h-px before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-200 after:origin-center after:h-px after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]' href="#">Contact</a></li>
+    </ul> */}
+    <button className='text-white bg-green-500 flex items-center gap-2 rounded-full px-2 cursor-pointer hover:bg-green-600 transition ring-white ring-1'>
       <lord-icon className="w-10 h-10"
     src="https://cdn.lordicon.com/jjxzcivr.json"
     trigger="hover"
